@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<h1>Employee Details</h1>
+
+<div style="justify-content: right; text-align:right">
+       
+    <a href="{{url_for('login')}}" class="btn btn-success">Login</a>
+    <a href="{{url_for('logout')}}" class="btn btn-success">Logout</a>
+    <a href="{{url_for('sign')}}" class="btn btn-success">signup</a>
+    <a href="{{url_for('add')}}" class="btn btn-success">Add Data</a>
+</div>
+
+
+<h2>Welcome</h2>
+
+{% endblock body %}

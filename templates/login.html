@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<style>
+    body{
+        background-color: black;
+    }
+    .login{
+        background: rgb(63,94,251);
+        background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(252,70,107,0.29735644257703087) 100%);
+        width: 52%;
+        height: 23rem;
+        text-align: center;
+        margin-left: 15rem;
+        margin-top: 3rem;
+        border-radius: 3%;
+    }
+    .login:hover{
+        background-color: aqua;
+    }
+    h1{
+        padding-top: 1rem;
+        color: white;
+    }
+   table{
+    margin-top: 2rem;
+   }
+   table tr td{
+    padding: 1rem;
+    color: white;
+    text-align: center;
+   }
+   .pass input:hover{
+    color: green;
+    background-color: aqua;
+   }
+</style>
+
+<div class="login">
+    <h1>Login</h1>
+
+    <div class="col-4 mx-auto">
+        <form action="" method="post">
+            {{form.hidden_tag()}}
+            <table>
+                <tr>            
+                    <td>{{form.username.label}}</td>
+                    <td>{{form.username()}}</td>
+                </tr>
+                <tr>
+                    <td>{{form.password.label}}</td>
+                    <td>{{form.password()}}</td>
+                </tr>
+                <tr class="pass">
+                    <td><input type="submit" value="Login"></td>
+                    <td><a href="{{url_for('signin')}}" class="btn btn-success">Sign In</a></td>
+                </tr>
+            </table>
+        </form>
+        
+    </div>
+</div>
+
+{% endblock body %}

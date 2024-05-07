@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<style>
+    .one input{
+        width: 15rem;
+        margin-left: 1rem;
+    }
+
+    .sub input:hover{
+        background-color: green;
+    }
+</style>
+
+
+<form action="" method="post">
+    <table>
+        <tr>
+            <td><label for="name">Name:</label></td>
+            <td class="one"><input type="text" name="name" value="{{data[1]}}" placeholder="Enter Employee Name"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email:</label></td>
+            <td class="one"><input type="email" name="email" value="{{data[2]}}" placeholder="Enter Employee Email"></td>
+        </tr>
+        <tr>
+            <td><label for="department">Department:</label></td>
+            <td class="one"><input type="text" name="department" value="{{data[3]}}" placeholder="Enter Employee Department"></td>
+        </tr>
+        <tr>
+            <td><label for="salary">Salary:</label></td>
+            <td class="one"><input type="number" name="salary" value="{{data[4]}}" placeholder="Enter Employee Salary"></td>
+        </tr>
+        <tr>
+            <td class="sub"><input type="submit" value="Submit"></td>
+        </tr>
+    </table>
+</form>
+
+{% endblock body %}

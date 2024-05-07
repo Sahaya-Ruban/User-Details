@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block body %}
+<form action="/insert" method="post">
+    <table>
+        <tr>
+            <td><label for="name">Name</label></td>
+            <td><input type="text" name="name" placeholder="Enter Employee Name"></td>
+        </tr>
+        <tr>
+            <td><label for="email">Email</label></td>
+            <td><input type="email" name="email" placeholder="Enter Employee Email"></td>
+        </tr>
+        <tr>
+            <td><label for="department">Department</label></td>
+            <td><input type="text" name="department" placeholder="Enter Employee Department"></td>
+        </tr>
+        <tr>
+            <td><label for="salary">Salary</label></td>
+            <td><input type="number" name="salary" placeholder="Enter Employee Salary"></td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Submit"></td>
+            <td></td>
+        </tr>
+    </table>
+</form>
+{% endblock body%}
